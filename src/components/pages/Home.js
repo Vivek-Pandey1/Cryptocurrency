@@ -6,10 +6,9 @@ const Home = () => {
   const api_url = "https://api.delta.exchange/v2/products/";
 
   const [allCoins, setCoins] = useState([]);
-  const [price, setPrice] = useState([]);
+  // const [price, setPrice] = useState([]);
   const [Loading, setLoading] = useState(true);
-  const [newPrice, setnewPrice] = useState([]);
-  // let newPrice = [];
+    // let newPrice = [];
   var uniqueData = [];
   var symbol = [];
   var newData = [];
@@ -35,12 +34,12 @@ const Home = () => {
   useEffect((coins) => {
     getPrice();
     return () => {
-      setPrice(newPrice);
+      
       socket.addEventListener("close", (event) => {
         console.log("The connection has been closed successfully.");
       });
     };
-  }, [price]);
+  }, );
 
   function getPrice(){
     socket.addEventListener("open", () => {
@@ -78,11 +77,11 @@ const Home = () => {
           
         }
         // console.log(srvData)
-        setnewPrice(getUniqueListBy(srvData, "symbol"));
+        // setPrice(getUniqueListBy(srvData, "symbol"));
         //  console.table(newPrice[0].symbol)
         
 
-        // console.log(newPrice)
+        // console.log(price)
       }
     });
   }
