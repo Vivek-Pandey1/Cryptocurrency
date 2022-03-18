@@ -1,7 +1,11 @@
+# Cryptocurrency tracker
 
+![image](https://user-images.githubusercontent.com/31257235/158952746-4e795648-189e-4d1b-a1df-0657cda3cb3e.png)
+
+## To start the project run the following command 
 ### `npm start`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) in the browser.
 
 
 ## Tech Stack Used
